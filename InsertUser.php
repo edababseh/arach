@@ -3,7 +3,7 @@
 	$servername = "ap-cdbr-azure-east-a.cloudapp.net";
 	$server_username =  "b6086b3d92bdcd";
 	$server_password = "8bc4f0a2";
-	$dbName = "user";
+	$dbName = "users";
 	
 //Variable from the user	
 	$username = $_POST["usernamePost"]; //"Lucas Test AC";
@@ -17,7 +17,7 @@
 		die("Connection Failed. ". mysqli_connect_error());
 	}
 	
-	$sql = "INSERT INTO user (username, email, password)
+	$sql = "INSERT INTO users (username, email, password)
 			VALUES ('".$username."','".$email."','".$password."')";
 	$result = mysqli_query($conn ,$sql);
 	
